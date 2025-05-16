@@ -34,8 +34,8 @@ translate:                                      ; loops through the input buffer
     ; store a space 
     mov     byte [outputBuf + ecx*3 + 2], ' '   ; needed for formatting the output
 
-    inc ecx                 
-    jmp translate                               ; reinitiate loop
+    inc    ecx                 
+    jmp    translate                            ; reinitiate loop
 
 print:
     mov     byte [outputBuf + ecx*3 - 1], 0x0A  ; replace the final space of the output with a newline character
