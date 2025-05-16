@@ -10,7 +10,7 @@ section .text
     global _start
 
 _start:
-    xor     ecx, ecx                            ; index, used to iterate through inputBuf
+    xor     ecx, ecx                            ; index, used to iterate through inputBuf, set to 0 initially
 
 translate:                                      ; loops through the input buffer and translates the data
     cmp     ecx, [inputLen]                     ; loops until ecx reaches the input buffer length 
