@@ -15,12 +15,9 @@ translate2ASCII.s
 Build Instructions:
 IDE used: VS Code
 
-translate2ASCII.s:
-
 Compile & Link:
 
 nasm -f elf32 -g -F dwarf -o translate2ASCII.o translate2ASCII.s
-
 ld -m elf_i386 -o translate2ASCII translate2ASCII.o
 
 Additional Information:
