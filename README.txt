@@ -3,7 +3,11 @@ Course: CMSC 313
 Time Slot: 10:00AM MON/WED
 
 Purpose:
-An assembly program that takes hex data and prints out the characters within, for example: 0x83  ->  83
+An assembly program that takes hex data and prints out the characters within, for example: 0x83  ->  83.
+Essentially what the program does is it takes each byte of data and isolates the two nibbles, first and second.
+Then it uses a table "0123456789ABCDEF" to find the correct character associated with the nibble, and adds it to the output buffer.
+after both nibbles are added we add a space, we loop through until the entire input buffer has been translated and then we print.
+
 
 Files:
 translate2ASCII.s
