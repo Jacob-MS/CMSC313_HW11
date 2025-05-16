@@ -26,7 +26,7 @@ translate:                                      ; loops through the input buffer
     mov     [outputBuf + ecx*3], dl             ; store the character in the output buffer
 
     ; translate the second nibble (4 bits)
-    and     al, 0x0F                            ; isolates the second nibble, 0x0F = 00001111 so the first 4 bits of al are set to 0 and the bottom 4 are preserved
+    and     al, 0x0F                            ; isolates the second nibble, 0x0F = 00001111 so the first 4 bits of al are set to 0 and the last 4 are preserved
     movzx   ebx, al                             ; stores byte in ebx with the proper bit amount, ebx will be used as an index for the hex table
     mov     dl, [table + ebx]                   ; store the hex character of the first nibble
     mov     [outputBuf + ecx*3 + 1], dl         ; store the character in the output buffer
